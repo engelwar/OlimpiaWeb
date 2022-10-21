@@ -1,0 +1,89 @@
+/*
+ * Roxy: Bootstrap template by GettTemplates.com
+ * https://gettemplates.co/roxy
+ */
+
+@font-face {
+    font-family: "FuturaLuz";
+    src: url("../fonts/Futura Std Book.ttf") format("truetype");
+}
+
+body {
+    font-family: 'FuturaLuz', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'FuturaLuz';
+    margin-top: 0;
+}
+
+a {
+    color: #355296;
+    transition: all .3s ease-in-out;
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+.btn:hover, a:hover {
+    text-decoration: none;
+    color: #333399;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bg-fixed {
+    background-size: cover;
+}
+
+.bg-grey {
+    background-color: #f7f8f9;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+section {
+    position: relative;
+}
+
+.section-content {
+    padding: 40px;
+}
+
+.section-content-footer {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.section-content-cate {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.title-wrap, .section-title {
+    text-align: center;
+}
+
+.shadow {
+    box-shadow: 0 10px 30px 0 rgba(67, 80, 98, 0.24), 0 2px 4px 0 rgba(67, 80, 98, 0.1) !important;
+}
+
+.jumbotron .carusel img {
+    object-fit: cover;
+    height: 70vh;
+}
+
+.section_banner_inicio {
+    width: 100%;
+    margin-top: 64px;
+}
+
+.sectiones_Pestaña {
+    width: 100%;
+}
