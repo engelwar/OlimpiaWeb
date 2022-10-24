@@ -88,7 +88,7 @@ $j=0;
     <div class="heading-section text-center">
       @foreach ($bann as $k=> $p)
       @if ($p->seccion == 4 && $p->orden == 1)
-      <img src="{{asset('img/$p->img')}}" style="width:300px; margin-top: 40px">
+      <img src="img/Productos/banner/{{$p->img}}" style="width:300px; margin-top: 40px">
       @endif
       @endforeach
     </div>
@@ -129,7 +129,7 @@ $j=0;
     <div class="heading-section text-center">
       @foreach ($bann as $k=> $p)
       @if ($p->seccion == 5 && $p->orden == 1)
-      <img src="{{asset('img/$p->img')}}" style="width:300px; margin-top: 40px">
+      <img src="img/Productos/banner/{{$p->img}}" style="width:300px; margin-top: 40px">
       @endif
       @endforeach
     </div>
@@ -193,13 +193,15 @@ $j=0;
           <div class="row d-flex h-100 align-items-center">
             <div class="product_title col" style="height: 230px">
               <h3 style="color: #355296">{{$p->codigo}}</h3>
-              <h2 style="color: #2850ac">Bs. {{$p->precio_actual}}</h2> 
-              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
-              <h5 style="color: rgb(110, 100, 100);text-decoration-line: line-through;">Bs. {{$p->precio_anterior}}</h5>
-              @endif
-         
               <p>{{$p->descripcion}}</p>
-              
+              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
+              <h5 style="color: #d11313;text-decoration-line: line-through; margin-bottom: 0;">Antes {{$p->precio_anterior}} Bs.</h5>
+              @endif
+              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
+              <h3 style="color: #2850ac">Ahora {{$p->precio_actual}} Bs.</h3> 
+              @else
+              <h3 style="color: #2850ac">Precio {{$p->precio_actual}} Bs.</h3> 
+              @endif
               <div class="product-price-btn">
                 <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
                   style="color: {{ $p->color_text }};"
