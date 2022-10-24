@@ -86,8 +86,11 @@ $j=0;
     >
     <!-- <div class="barra_inicio"></div> -->
     <div class="heading-section text-center">
-
-      <img src="{{asset('img/DISEÑO 2.png')}}" style="width:300px; margin-top: 40px">
+      @foreach ($bann as $k=> $p)
+      @if ($p->seccion == 4 && $p->orden == 1)
+      <img src="{{asset('img/$p->img')}}" style="width:300px; margin-top: 40px">
+      @endif
+      @endforeach
     </div>
     <div class="swiper mySwiper">
       <!-- <div class="barra_inicio"></div> -->
@@ -124,7 +127,11 @@ $j=0;
     >
     >
     <div class="heading-section text-center">
-      <h2>OFERTAS</h2>
+      @foreach ($bann as $k=> $p)
+      @if ($p->seccion == 5 && $p->orden == 1)
+      <img src="{{asset('img/$p->img')}}" style="width:300px; margin-top: 40px">
+      @endif
+      @endforeach
     </div>
     @if($ofer->count() > 3)
     <div class="swiper mySwiper">
