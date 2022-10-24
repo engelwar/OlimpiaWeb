@@ -31,6 +31,7 @@
                 </thead>
                 <tbody>
                     @foreach($archivos as $banner)
+                    @if ($banner->seccion == 1)
                     <tr>
                         <td class="order">
                             <form action="{{ route ('banner.update',$banner->id) }}" method="POST" enctype="multipart/form-data">
@@ -57,16 +58,9 @@
                             </div>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
-                <tfoot class="bg-primary text-white">
-                    <tr>
-                        <th scope="col">Orden</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col"></th>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>
@@ -96,6 +90,7 @@
                 </thead>
                 <tbody>
                     @foreach($archivos as $banner)
+                    @if ($banner->seccion == 2)
                     <tr>
                         <td class="order">
                             <form action="{{ route ('banner.update',$banner->id) }}" method="POST" enctype="multipart/form-data">
@@ -122,16 +117,9 @@
                             </div>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
-                <tfoot class="bg-primary text-white">
-                    <tr>
-                        <th scope="col">Orden</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col"></th>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>
@@ -161,6 +149,7 @@
                 </thead>
                 <tbody>
                     @foreach($archivos as $banner)
+                    @if ($banner->seccion == 3)
                     <tr>
                         <td class="order">
                             <form action="{{ route ('banner.update',$banner->id) }}" method="POST" enctype="multipart/form-data">
@@ -187,16 +176,9 @@
                             </div>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
-                <tfoot class="bg-primary text-white">
-                    <tr>
-                        <th scope="col">Orden</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col"></th>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>

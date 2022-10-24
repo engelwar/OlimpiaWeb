@@ -17,6 +17,7 @@ class CreateBannersTable extends Migration
             $table->id();
             $table->integer('orden');
             $table->string('nombre',20)->unique();
+            $table->integer('seccion');
             $table->string('img',50);
             $table->timestamps();
         });

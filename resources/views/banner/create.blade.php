@@ -30,9 +30,8 @@
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Seccion</label>
-              <select class="form-select" aria-label="Default select example" required>
-                <option selected></option>
-                <option value="1">Principal</option>
+              <select class="form-select" aria-label="Default select example" required name="seccion">
+                <option value="1" selected>Principal</option>
                 <option value="2">Producto</option>
                 <option value="3">Oferta</option>
               </select>
