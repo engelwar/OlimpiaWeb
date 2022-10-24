@@ -26,6 +26,8 @@
                         <th scope="col">Archivo</th>
                         <th scope="col">ColorDeBloque</th>
                         <th scope="col">ColorDeTexto</th>
+                        <th>Precio Anterior</th>
+                        <th>Precio Actual</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -39,6 +41,8 @@
                         </td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_bloque"></td>
+                        <th>{{$product->precio_anterior}}</th>
+                        <th>{{$product->precio_actual}}</th>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -59,6 +63,8 @@
                         <th scope="col">Archivo</th>
                         <th scope="col">ColorDeBloque</th>
                         <th scope="col">ColorDeTexto</th>
+                        <th>Precio Anterior</th>
+                        <th>Precio Actual</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>
@@ -78,6 +84,8 @@
                         <th scope="col">Archivo</th>
                         <th scope="col">ColorDeBloque</th>
                         <th scope="col">ColorDeTexto</th>
+                        <th>Precio Anterior</th>
+                        <th>Precio Actual</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -91,6 +99,8 @@
                         </td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_bloque"></td>
+                        <th>{{$product->precio_anterior}}</th>
+                        <th>{{$product->precio_actual}}</th>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -111,6 +121,8 @@
                         <th scope="col">Archivo</th>
                         <th scope="col">ColorDeBloque</th>
                         <th scope="col">ColorDeTexto</th>
+                        <th>Precio Anterior</th>
+                        <th>Precio Actual</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>

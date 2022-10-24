@@ -22,6 +22,8 @@ class CreateProductsTable extends Migration
             $table->string('img',50);
             $table->string('color_bloque',10);
             $table->string('color_text',10);
+            $table->double('precio_anterior');
+            $table->double('precio_actual');
             $table->timestamps();
         });
     }

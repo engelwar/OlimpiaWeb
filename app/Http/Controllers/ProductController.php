@@ -100,6 +100,8 @@ class ProductController extends Controller
         $product->url = $request->get('url');
         $product->color_bloque = $request->get('color_bloque');
         $product->color_text = $request->get('color_text');
+        $product->precio_anterior = $request->get('precio_anterior');
+        $product->precio_actual = $request->get('precio_actual');
         if($request->file('img') != null){
             $rutaGuardarImg = 'img/Productos/';
             $imagenProducto = $request->file('img')->getClientOriginalName();

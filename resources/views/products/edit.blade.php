@@ -47,13 +47,23 @@
                 </label>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="" class="form-label">Color de Bloque</label>
-              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque">
-            </div>
-            <div class="mb-3">
-              <label for="" class="form-label">Color de Texto</label>
-              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_text">
+            <div class="d-flex justify-content-between">
+              <div class="mb-3">
+                <label for="" class="form-label">Color de Bloque</label>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Color de Texto</label>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_text" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Precio Anterior</label>
+                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_anterior}}" name="precio_anterior">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Precio Actual</label>
+                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_actual}}" name="precio_actual" required>
+              </div>
             </div>
             <a href="{{ route('products.index') }}" class="btn btn-secondary" tabindex="7">Cancelar</a>
             <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>
