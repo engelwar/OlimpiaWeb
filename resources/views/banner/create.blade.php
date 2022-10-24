@@ -34,6 +34,8 @@
                 <option value="1" selected>Principal</option>
                 <option value="2">Producto</option>
                 <option value="3">Oferta</option>
+                <option value="4">Logo Producto</option>
+                <option value="5">Logo Oferta</option>
               </select>
             </div>
             <div class="">

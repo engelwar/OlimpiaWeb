@@ -58,11 +58,11 @@
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Precio Anterior</label>
-                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_anterior}}" name="precio_anterior">
+                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_anterior}}" name="precio_anterior" step="any">
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Precio Actual</label>
-                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_actual}}" name="precio_actual" required>
+                <input type="number" class="form-control" id="exampleColorInput" value="{{$product->precio_actual}}" name="precio_actual" step="any" required>
               </div>
             </div>
             <a href="{{ route('products.index') }}" class="btn btn-secondary" tabindex="7">Cancelar</a>

@@ -26,6 +26,8 @@
                 <option value="1" @if($banner->seccion == 1) selected @endif>Principal</option>
                 <option value="2" @if($banner->seccion == 2) selected @endif>Producto</option>
                 <option value="3" @if($banner->seccion == 3) selected @endif>Oferta</option>
+                <option value="4" @if($banner->seccion == 4) selected @endif>Oferta</option>
+                <option value="5" @if($banner->seccion == 5) selected @endif>Oferta</option>
               </select>
             </div>
             <div class="">
