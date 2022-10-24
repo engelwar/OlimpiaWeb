@@ -22,9 +22,9 @@
                 <thead class="bg-primary text-white">
                     <tr>
                         <th scope="col">Código</th>
-                        <th scope="col">Categoría</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
+                        <th scope="col">Color</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -32,11 +32,11 @@
                     @foreach($productos as $product)
                     <tr>
                         <td>{{ $product->codigo }}</td>
-                        <td>{{ $product->categoria }}</td>
                         <td>{{ $product->descripcion }}</td>
                         <td class="">
                             <img src="{{asset('img/Productos/'.$product->img)}}" width="100px">
                         </td>
+                        <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -53,9 +53,9 @@
                 <tfoot class="bg-primary text-white">
                     <tr>
                         <th scope="col">Código</th>
-                        <th scope="col">Categoría</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
+                        <th scope="col">Color</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>
@@ -71,9 +71,9 @@
                 <thead class="bg-primary text-white">
                     <tr>
                         <th scope="col">Código</th>
-                        <th scope="col">Categoría</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
+                        <th scope="col">Color</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -81,11 +81,11 @@
                     @foreach($ofertas as $product)
                     <tr>
                         <td>{{ $product->codigo }}</td>
-                        <td>{{ $product->categoria }}</td>
                         <td>{{ $product->descripcion }}</td>
                         <td class="">
                             <img src="{{asset('img/Productos/'.$product->img)}}" width="100px">
                         </td>
+                        <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -102,9 +102,9 @@
                 <tfoot class="bg-primary text-white">
                     <tr>
                         <th scope="col">Código</th>
-                        <th scope="col">Categoría</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
+                        <th scope="col">Color</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>

@@ -29,15 +29,6 @@
                             @endif
                         </div>
                         <div class="mb-3">
-                            <label for="" class="col-form-label">Categoría:</label>
-                            <select id="categoria" class="form-select form-control" aria-label="Default select example" name="categoria" required tabindex="2">
-                                <option selected></option>
-                                <option value="Categoría 1">Categoría 1</option>
-                                <option value="Categoría 2">Categoría 2</option>
-                                <option value="Categoría 3">Categoría 3</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
                             <label for="" class="col-form-label">Productos/Ofertas</label>
                             <select id="producto_oferta" class="form-select form-control" aria-label="Default select example" name="producto_oferta" required tabindex="3">
                                 <option selected></option>
@@ -63,6 +54,10 @@
                                     <input name="img" id="img" type='file' class="hidden w-100" accept=".jpg, .png" tabindex="6" required>
                                 </label>
                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Color de Bloque</label>
+                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="" title="Choose your color" name="color_bloque">
                         </div>
                         <a href="{{ route('products.index') }}" class="btn btn-secondary" tabindex="7">Cancelar</a>
                         <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>

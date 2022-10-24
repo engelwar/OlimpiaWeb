@@ -95,10 +95,10 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->codigo = $request->get('codigo');
-        $product->categoria = $request->get('categoria');
         $product->producto_oferta = $request->get('producto_oferta');
         $product->descripcion = $request->get('descripcion');
         $product->url = $request->get('url');
+        $product->color_bloque = $request->get('color_bloque');
         if($request->file('img') != null){
             $rutaGuardarImg = 'img/Productos/';
             $imagenProducto = $request->file('img')->getClientOriginalName();
