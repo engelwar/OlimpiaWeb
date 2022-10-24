@@ -7631,6 +7631,15 @@ button.bg-dark:focus {
   }
 } */
 
+@media (max-width: 361px) {
+  .container_banner_productos_halloween {
+    background-image: url(../img/IMAGEN-CELULAR.png) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
 @media (min-width: 576px) {
   .flex-sm-row {
     flex-direction: row !important;

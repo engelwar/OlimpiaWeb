@@ -79,7 +79,7 @@ $conteo = 0;
 
 <!-- INICIO DE CAROUSEL PRODUCTOS -->
 <section class="container_glide mt-4">
-  <div class="featurettes container_banner_productos" @foreach ($bann as $k=> $p)
+  <div class="featurettes container_banner_productos_halloween" @foreach ($bann as $k=> $p)
     @if ($p->seccion == 2 && $p->orden == 1)
     style="background-image: url(img/Productos/banner/{{$p->img}});"
     @endif
