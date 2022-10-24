@@ -78,13 +78,12 @@ $j=0;
 
 <!-- INICIO DE CAROUSEL PRODUCTOS -->
 <section class="container_glide mt-4">
-  <div class="featurettes container_banner_productos"
-  @foreach ($bann as $k => $p)
-  @if ($p->seccion == 2 && $p->orden == 1)
-  style="background-image: url(img/Productos/banner/{{$p->img}});"
-  @endif
-  @endforeach
-  >
+  <div class="featurettes container_banner_productos" @foreach ($bann as $k=> $p)
+    @if ($p->seccion == 2 && $p->orden == 1)
+    style="background-image: url(img/Productos/banner/{{$p->img}});"
+    @endif
+    @endforeach
+    >
     <!-- <div class="barra_inicio"></div> -->
     <div class="heading-section text-center">
       <img src="{{asset('img/DISEÑO 2.png')}}" style="width:300px; margin-top: 40px">
@@ -95,21 +94,19 @@ $j=0;
         @foreach($prod as $k => $p)
         <div class="swiper-slide">
           @if ($p->producto_oferta == 'Productos')
-          <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }}; color: {{ $p->color_text }};"
-          @endif
-          >
+          <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }}; color: {{ $p->color_text }};" @endif>
             <img src="img/Productos/{{$p->img}}" alt="img">
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
             </div>
+          </div>
         </div>
+        @endforeach
       </div>
-      @endforeach
+      <div class="swiper-pagination"></div>
+      <!-- <div class="barra_fin"></div> -->
     </div>
-    <div class="swiper-pagination"></div>
     <!-- <div class="barra_fin"></div> -->
-  </div>
-  <!-- <div class="barra_fin"></div> -->
 </section>
 
 <!-- FIN DE CAROUSEL PRODUCTOS -->
@@ -117,14 +114,13 @@ $j=0;
 <!-- INICIO DE CAROUSEL OFERTAS -->
 
 <section class="container_glide mt-4">
-  <div class="featurettes container_banner_productos"
-  @foreach ($bann as $k => $p)
-  @if ($p->seccion == 3 && $p->orden == 1)
-  style="background-image: url(img/Productos/banner/{{$p->img}});"
-  @endif
-  @endforeach
-  >
-  >
+  <div class="featurettes container_banner_productos" @foreach ($bann as $k=> $p)
+    @if ($p->seccion == 3 && $p->orden == 1)
+    style="background-image: url(img/Productos/banner/{{$p->img}});"
+    @endif
+    @endforeach
+    >
+    >
     <div class="heading-section text-center">
       <h2>OFERTAS</h2>
     </div>
@@ -134,44 +130,45 @@ $j=0;
       <div class="swiper-wrapper">
         @foreach($ofer as $k => $p)
         <div class="swiper-slide">
-          <div class="myBtn{{$k+1}} carousel__elemento" 
-          @if ($p->producto_oferta == 'Ofertas')
-          style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
-          @endif
-          >
+          <div class="myBtn{{$k+1}} carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
+            style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
+            @endif
+            >
             <img src="img/Productos/{{$p->img}}" alt="img">
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
             </div>
-        </div>
-      </div>
-      @endforeach
-    </div>
-    <div class="swiper-pagination"></div>
-    <!-- <div class="barra_fin"></div> -->
-  </div>
-  @else
-  <div class="swiper swiper_ofertas">
-    <div class="d-flex justify-content-around flex-wrap">
-      @foreach($ofer as $k => $p)
-      <div class="swiper-slide mb-4">
-        <div class="carousel__elemento"
-        @if ($p->producto_oferta == 'Ofertas')
-        style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
-        @endif
-        >
-          <img src="img/Productos/{{$p->img}}" alt="">
-          <div class="descripcion_prod">
-            <a href="{{$p->url}}" target="_blank">
-              <h5>{{$p->descripcion}}</h5>
-            </a>
           </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- <div class="barra_fin"></div> -->
+    </div>
+    @else
+    <div class="swiper swiper_ofertas">
+      <div class="d-flex justify-content-around flex-wrap">
+        @foreach($ofer as $k => $p)
+        <div class="swiper-slide mb-4">
+          <div class="carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
+            style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
+            @endif
+            >
+            <img src="img/Productos/{{$p->img}}" alt="">
+            <div class="descripcion_prod">
+              <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
+                style="color: {{ $p->color_text }};"
+                @endif
+                >
+                <h5>{{$p->descripcion}}</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+        @endforeach
       </div>
     </div>
-    @endforeach
-  </div>
-  </div>
-  @endif
+    @endif
   </div>
 </section>
 @foreach($prod as $k => $p)
@@ -189,7 +186,10 @@ $j=0;
               <h2>{{$p->codigo}}</h2>
               <p>{{$p->descripcion}}</p>
               <div class="product-price-btn">
-                <a href="{{$p->url}}" target="_blank">
+                <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
+                  style="color: {{ $p->color_text }};"
+                  @endif
+                  >
                   <button class="btn btn-primary btn-shadow btn-lg">Comprar</button>
                 </a>
               </div>
