@@ -95,7 +95,7 @@ $j=0;
         @foreach($prod as $k => $p)
         <div class="swiper-slide">
           @if ($p->producto_oferta == 'Productos')
-          <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }};"
+          <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }}; color: {{ $p->color_text }};"
           @endif
           >
             <img src="img/Productos/{{$p->img}}" alt="img">
@@ -136,7 +136,7 @@ $j=0;
         <div class="swiper-slide">
           <div class="myBtn{{$k+1}} carousel__elemento" 
           @if ($p->producto_oferta == 'Ofertas')
-          style="background-color: {{$p->color_bloque}};"
+          style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
           @endif
           >
             <img src="img/Productos/{{$p->img}}" alt="img">
@@ -157,7 +157,7 @@ $j=0;
       <div class="swiper-slide mb-4">
         <div class="carousel__elemento"
         @if ($p->producto_oferta == 'Ofertas')
-        style="background-color: {{$p->color_bloque}};"
+        style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
         @endif
         >
           <img src="img/Productos/{{$p->img}}" alt="">
