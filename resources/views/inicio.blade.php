@@ -94,8 +94,10 @@ $j=0;
       <div class="swiper-wrapper">
         @foreach($prod as $k => $p)
         <div class="swiper-slide">
-          @php
-          if($i < 6){ $i=$i+1; }else{ $i=1; } @endphp <div class="myBtn{{$k+1}} carousel__elemento opcion{{$i}} productos_elementos">
+          @if ($p->producto_oferta == 'Productos')
+          <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }};"
+          @endif
+          >
             <img src="img/Productos/{{$p->img}}" alt="img">
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
@@ -132,8 +134,11 @@ $j=0;
       <div class="swiper-wrapper">
         @foreach($ofer as $k => $p)
         <div class="swiper-slide">
-          @php
-          if($i < 6){ $i=$i+1; }else{ $i=1; } @endphp <div class="myBtn{{$k+1}} carousel__elemento opcion{{$i}}">
+          <div class="myBtn{{$k+1}} carousel__elemento" 
+          @if ($p->producto_oferta == 'Ofertas')
+          style="background-color: {{$p->color_bloque}};"
+          @endif
+          >
             <img src="img/Productos/{{$p->img}}" alt="img">
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
@@ -150,8 +155,11 @@ $j=0;
     <div class="d-flex justify-content-around flex-wrap">
       @foreach($ofer as $k => $p)
       <div class="swiper-slide mb-4">
-        @php
-        if($j < 3){ $j=$j+1; }else{ $j=1; } @endphp <div class="carousel__elemento opcion{{$j}}">
+        <div class="carousel__elemento"
+        @if ($p->producto_oferta == 'Ofertas')
+        style="background-color: {{$p->color_bloque}};"
+        @endif
+        >
           <img src="img/Productos/{{$p->img}}" alt="">
           <div class="descripcion_prod">
             <a href="{{$p->url}}" target="_blank">
