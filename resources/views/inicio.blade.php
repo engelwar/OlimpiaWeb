@@ -1,5 +1,13 @@
 @extends('app')
-
+@section('estilo')
+<style>
+  .container_banner_productos {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+</style>
+@endsection
 @section('content')
 @include('navbar')
 
@@ -9,9 +17,11 @@
     <div class="carusel" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="400" data-aos-easing="ease-out-quart">
       <div class="testi-carousel owl-carousel owl-carousel-class">
         @foreach ($bann as $k => $b)
+        @if ($b->seccion == 1)
         <div id="banner_celular" class="testi-item text-center">
           <img src="img/Productos/banner/{{$b->img}}" alt="Carusel" style="object-fit: cover; object-position: center" width="100%" ; height="100%">
         </div>
+        @endif
         @endforeach
       </div>
     </div>
@@ -68,7 +78,13 @@ $j=0;
 
 <!-- INICIO DE CAROUSEL PRODUCTOS -->
 <section class="container_glide mt-4">
-  <div class="featurettes container_glide_banner">
+  <div class="featurettes container_banner_productos"
+  @foreach ($bann as $k => $p)
+  @if ($p->seccion == 2 && $p->orden == 1)
+  style="background-image: url(img/Productos/banner/{{$p->img}});"
+  @endif
+  @endforeach
+  >
     <!-- <div class="barra_inicio"></div> -->
     <div class="heading-section text-center">
       <img src="{{asset('img/DISEÑO 2.png')}}" style="width:300px; margin-top: 40px">
@@ -98,14 +114,21 @@ $j=0;
 
 <!-- INICIO DE CAROUSEL OFERTAS -->
 
-<section class="container_glide">
-  <div class="featurettes">
+<section class="container_glide mt-4">
+  <div class="featurettes container_banner_productos"
+  @foreach ($bann as $k => $p)
+  @if ($p->seccion == 3 && $p->orden == 1)
+  style="background-image: url(img/Productos/banner/{{$p->img}});"
+  @endif
+  @endforeach
+  >
+  >
     <div class="heading-section text-center">
       <h2>OFERTAS</h2>
     </div>
     @if($ofer->count() > 3)
     <div class="swiper mySwiper">
-      <div class="barra_inicio"></div>
+      <!-- <div class="barra_inicio"></div> -->
       <div class="swiper-wrapper">
         @foreach($ofer as $k => $p)
         <div class="swiper-slide">
@@ -120,7 +143,7 @@ $j=0;
       @endforeach
     </div>
     <div class="swiper-pagination"></div>
-    <div class="barra_fin"></div>
+    <!-- <div class="barra_fin"></div> -->
   </div>
   @else
   <div class="swiper swiper_ofertas">

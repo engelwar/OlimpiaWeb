@@ -6704,15 +6704,6 @@ a.close.disabled {
   color: #212529;
 }
 
-/*! BANNER HALOWEEN */
-/* 005872 */
-.container_glide_banner {
-  background-image: url(../img/IMAGEN-CELULAR.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-
 .carousel {
   position: relative;
 }
@@ -7631,14 +7622,14 @@ button.bg-dark:focus {
   align-self: stretch !important;
 }
 
-@media (min-width: 361px) {
+/* @media (min-width: 361px) {
   .container_glide_banner {
-    background-image: url(../img/IMAGEN-PNG-4.png);
+    background-image: url(../img/Productos/banner/artedis.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
   }
-}
+} */
 
 @media (min-width: 576px) {
   .flex-sm-row {
