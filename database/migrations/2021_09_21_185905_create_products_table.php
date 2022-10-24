@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('url',150);
             $table->string('img',50);
             $table->string('color_bloque',10);
+            $table->string('color_text',10);
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@
 
 
 
-<div class="container_tablas d-flex w-100 m-auto flex-md-nowrap flex-wrap">
+<div class="container_tablas d-flex w-100 m-auto flex-wrap">
     <div class="tabla1 w-100 ml-3 mr-1 mb-4">
         <div class="">
             <div class="card-header text-center">
@@ -24,7 +24,8 @@
                         <th scope="col">Código</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
-                        <th scope="col">Color</th>
+                        <th scope="col">ColorDeBloque</th>
+                        <th scope="col">ColorDeTexto</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -37,6 +38,7 @@
                             <img src="{{asset('img/Productos/'.$product->img)}}" width="100px">
                         </td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
+                        <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_bloque"></td>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -55,7 +57,8 @@
                         <th scope="col">Código</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
-                        <th scope="col">Color</th>
+                        <th scope="col">ColorDeBloque</th>
+                        <th scope="col">ColorDeTexto</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>
@@ -73,7 +76,8 @@
                         <th scope="col">Código</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
-                        <th scope="col">Color</th>
+                        <th scope="col">ColorDeBloque</th>
+                        <th scope="col">ColorDeTexto</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -86,6 +90,7 @@
                             <img src="{{asset('img/Productos/'.$product->img)}}" width="100px">
                         </td>
                         <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque"></td>
+                        <td><input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_bloque"></td>
                         <td>
                             <div class="d-flex justify-content-center flex-row">
                                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
@@ -104,7 +109,8 @@
                         <th scope="col">Código</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Archivo</th>
-                        <th scope="col">Color</th>
+                        <th scope="col">ColorDeBloque</th>
+                        <th scope="col">ColorDeTexto</th>
                         <th scope="col"></th>
                     </tr>
                 </tfoot>
