@@ -46,6 +46,7 @@
 @php
 $i=0;
 $j=0;
+$conteo = 0;
 @endphp
 
 <section class="sectiones_Pestaña">
@@ -100,7 +101,7 @@ $j=0;
           @if ($p->producto_oferta == 'Productos')
           <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }}; color: {{ $p->color_text }};" @endif>
             <img src="img/Productos/{{$p->img}}" alt="img">
-          
+
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
             </div>
@@ -128,8 +129,15 @@ $j=0;
     >
     <div class="heading-section text-center">
       @foreach ($bann as $k=> $p)
+      @php
+      $conteo++;
+      @endphp
       @if ($p->seccion == 5 && $p->orden == 1)
       <img src="img/Productos/banner/{{$p->img}}" style="width:300px; margin-top: 40px">
+      @elseif($conteo == 1)
+      <div class="heading-section text-center">
+        <h2>OFERTAS</h2>
+      </div>
       @endif
       @endforeach
     </div>
@@ -198,9 +206,9 @@ $j=0;
               <h5 style="color: #d11313;text-decoration-line: line-through; margin-bottom: 0;">Antes {{$p->precio_anterior}} Bs.</h5>
               @endif
               @if ($p->precio_anterior != null || $p->precio_anterior != 0)
-              <h3 style="color: #2850ac">Ahora {{$p->precio_actual}} Bs.</h3> 
+              <h3 style="color: #2850ac">Ahora {{$p->precio_actual}} Bs.</h3>
               @else
-              <h3 style="color: #2850ac">Precio {{$p->precio_actual}} Bs.</h3> 
+              <h3 style="color: #2850ac">Precio {{$p->precio_actual}} Bs.</h3>
               @endif
               <div class="product-price-btn">
                 <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
