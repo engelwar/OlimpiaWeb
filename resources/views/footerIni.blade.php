@@ -1,77 +1,6 @@
   
 
-<style>
-    .btn-12{
-      position: relative;
-      right: 20px;
-      bottom: 20px;
-    
-      width: 130px;
-      height: 40px;
-    
-      -webkit-perspective: 230px;
-      perspective: 230px;
-    }
-    .btn-12 span {
-      background: none;
-    
-      display: block;
-      position: absolute;
-      width: 130px;
-      height: 40px;
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-       7px 7px 20px 0px rgba(0,0,0,.1),
-       4px 4px 5px 0px rgba(0,0,0,.1);
-      border-radius: 5px;
-      margin:0;
-      text-align: center;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all .3s;
-      transition: all .3s;
-    }
-    .btn-12 span:nth-child(1) {
-      box-shadow:
-       -7px -7px 20px 0px #fff9,
-       -4px -4px 5px 0px #fff9,
-       7px 7px 20px 0px #0002,
-       4px 4px 5px 0px #0001;
-      -webkit-transform: rotateX(90deg);
-      -moz-transform: rotateX(90deg);
-      transform: rotateX(90deg);
-      -webkit-transform-origin: 50% 50% -20px;
-      -moz-transform-origin: 50% 50% -20px;
-      transform-origin: 50% 50% -20px;
-    }
-    .btn-12 span:nth-child(2) {
-      -webkit-transform: rotateX(0deg);
-      -moz-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-      -webkit-transform-origin: 50% 50% -20px;
-      -moz-transform-origin: 50% 50% -20px;
-      transform-origin: 50% 50% -20px;
-    }
-    .btn-12:hover span:nth-child(1) {
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-       7px 7px 20px 0px rgba(0,0,0,.1),
-       4px 4px 5px 0px rgba(0,0,0,.1);
-      -webkit-transform: rotateX(0deg);
-      -moz-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-    }
-    .btn-12:hover span:nth-child(2) {
-      box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-       7px 7px 20px 0px rgba(0,0,0,.1),
-       4px 4px 5px 0px rgba(0,0,0,.1);
-     color: transparent;
-      -webkit-transform: rotateX(-90deg);
-      -moz-transform: rotateX(-90deg);
-      transform: rotateX(-90deg);
-    }
-    
-    
-    </style>
+
     
       
       
@@ -238,11 +167,15 @@
               </div>
               <div class="text-center m-auto col-md-4">
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: none;background: none">
-                <span id="a2">Politicas</span>
+                <span> Politicas </span> <span style="text-transform: lowercase">de </span> <span style="text-transform: lowercase">envio</span>
+                                 
+                  
                 </button>
              
-          
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: none;background: none">Terminos y condiciones</button>
+                <span style="color: #fff;">&amp;</span>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: none;background: none">
+                <span>Terminos </span><span style="text-transform: lowercase"> y</span> <span style="text-transform: lowercase"> condiciones</span>
+                </button>
               </div>
     
               
@@ -268,18 +201,19 @@
          
           </div>
         </div>
-        @section('js')
-        <script>
-          $(document).ready(function() {
-            $('#exampleModal').modal('show')
-          });
-          $('.botonX').click(function() {
-            $('#exampleModal').modal('hide')
-          });
-          $('.botonX').click(function() {
-            $('#exampleModal2').modal('hide')
-          });
-        </script>
-      
-        @endsection
+   
       </section>
+      @section('js')
+      <script>
+        $(document).ready(function() {
+          $('#exampleModal').modal('show')
+        });
+        $('.botonX').click(function() {
+          $('#exampleModal').modal('hide')
+        });
+        $('.botonX').click(function() {
+          $('#exampleModal2').modal('hide')
+        });
+      </script>
+    
+      @endsection
