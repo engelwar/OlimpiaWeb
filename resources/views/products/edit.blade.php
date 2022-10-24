@@ -49,11 +49,11 @@
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Color de Bloque</label>
-              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color }}" title="Choose your color" name="color_bloque">
+              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_bloque }}" title="Choose your color" name="color_bloque">
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Color de Texto</label>
-              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color }}" title="Choose your color" name="color_text">
+              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="{{ $product->color_text }}" title="Choose your color" name="color_text">
             </div>
             <a href="{{ route('products.index') }}" class="btn btn-secondary" tabindex="7">Cancelar</a>
             <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>
