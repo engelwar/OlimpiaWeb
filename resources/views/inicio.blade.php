@@ -186,9 +186,10 @@ $j=0;
           <div class="row d-flex h-100 align-items-center">
             <div class="product_title col" style="height: 230px">
               <h3 style="color: #355296">{{$p->codigo}}</h3>
-              <h2 style="color: #2850ac">1000 Bs</h2> 
-        
-              <h5 style="color: rgb(110, 100, 100);text-decoration-line: line-through;">1120 BS</h5>
+              <h2 style="color: #2850ac">Bs. {{$p->precio_actual}}</h2> 
+              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
+              <h5 style="color: rgb(110, 100, 100);text-decoration-line: line-through;">Bs. {{$p->precio_anterior}}</h5>
+              @endif
          
               <p>{{$p->descripcion}}</p>
               
