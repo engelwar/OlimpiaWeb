@@ -1,49 +1,46 @@
-  <!-- Modal -->
+  
+
+
+  
+  
+  <!-- Modal  politicas-->
   <div class="modal fade p-0 exampleModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
+ 
     <div class="modal-dialog">
       <div class="modal-content">
+
         <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="exampleModal"><img src="{{ asset('img/icon.png') }}" width="20%" height="20%"alt=""></h5>
+          <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">X
+            
+          </button>
         </div>
+       
+     
         <div class="modal-body">
-          <img src="{{ asset('img/POLITICAS.jpg') }}" alt="">
+          <img  src="{{ asset('img/POLITICAS.jpg') }}"  alt="">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
+          <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">Cerrar</button>   </div>
       </div>
     </div>
   </div>
 
-  <section id="cta" style="background-color:#203972;border-top:solid #fff">
-    <div class="container-fluid">
-      <div class="section-content-footer">
-        <div class="row">
-          <div class="col-md-4 text-left">
-            <img src="{{ asset('img/logo-white.png')}}" alt="" style="width:200px">
-          </div>
-          <div class="text-center m-auto col-md-4">
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Politicas</button>
-          </div>
-          <div class="links_social col-md-4 text-right d-flex align-items-center justify-content-end ">
-            <nav class="nav nav-mastfoot">
-              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.facebook.com/olimpialibreria" target="_blank">
-                <i class="fab fa-facebook-f fa-2x"></i>
-              </a>
-              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.instagram.com/libreriaolimpia/" target="_blank">
-                <i class="fab fa-instagram fa-2x"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 d-flex align-items-center">
-            <p class="mx-auto text-center text-white mb-0">
-              &copy; 2021 LIBRERÍA Y PAPELERÍA OLIMPIA S.R.L. <br>
-              <a style="font-size: 0.7rem; cursor:pointer" id="term-modal">Términos y condiciones</a>
-            </p>
-          </div>
-        </div>
+<!-- Modal de condiciones de uso-->
+<div class="modal fade p-0 exampleModal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
+ 
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal"><img src="{{ asset('img/icon.png') }}" width="20%" height="20%"alt=""></h5>
+        <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">X
+          
+        </button>
+      </div>
+     
+   
+      <div class="modal-body">
         <div id="terminos" class="te-modal">
           <div class="term-modal" style="height:80wh;">
             <div class="row g-0 justify-content-center p-4 bg-white">
@@ -152,12 +149,70 @@
           </div>
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">Cerrar</button>   </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <section id="cta" style="background-color:#203972;border-top:solid #fff">
+    <div class="container-fluid">
+      <div class="section-content-footer">
+        <div class="row">
+          <div class="col-md-4 text-left">
+            <img src="{{ asset('img/logo-white.png')}}" alt="" style="width:200px">
+          </div>
+          <div class="text-center m-auto col-md-4">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: none;background: none">
+            <span> Politicas </span> <span style="text-transform: lowercase">de </span> <span style="text-transform: lowercase">envio</span>
+                             
+              
+            </button>
+            <div class="text-center m-auto col-md-4">
+              <span style="color: #fff;">&amp;</span>
+            </div>
+        
+      
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: none;background: none">
+            <span>Terminos </span><span style="text-transform: lowercase"> y</span> <span style="text-transform: lowercase"> condiciones</span>
+            </button>
+          </div>
+
+          
+          <div class="links_social col-md-4 text-right d-flex align-items-center justify-content-end ">
+            <nav class="nav nav-mastfoot">
+              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.facebook.com/olimpialibreria" target="_blank">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.instagram.com/libreriaolimpia/" target="_blank">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <p class="mx-auto text-center text-white mb-0">
+              &copy; 2021 LIBRERÍA Y PAPELERÍA OLIMPIA S.R.L. <br>
+          <!--<a style="font-size: 0.7rem; cursor:pointer" id="term-modal">Términos y condiciones</a>-->    
+            </p>
+          </div>
+        </div>
+     
+      </div>
     </div>
     @section('js')
     <script>
-      $(document).ready(function() {
-        $('#exampleModal').modal('toggle')
+    
+      $('.botonX').click(function() {
+        $('#exampleModal').modal('hide')
+      });
+      $('.botonX').click(function() {
+        $('#exampleModal2').modal('hide')
       });
     </script>
+  
     @endsection
   </section>

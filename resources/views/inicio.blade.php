@@ -86,6 +86,7 @@ $j=0;
     >
     <!-- <div class="barra_inicio"></div> -->
     <div class="heading-section text-center">
+
       <img src="{{asset('img/DISEÑO 2.png')}}" style="width:300px; margin-top: 40px">
     </div>
     <div class="swiper mySwiper">
@@ -96,6 +97,7 @@ $j=0;
           @if ($p->producto_oferta == 'Productos')
           <div class="myBtn{{$k+1}} carousel__elemento productos_elementos" style="background-color: {{ $p->color_bloque }}; color: {{ $p->color_text }};" @endif>
             <img src="img/Productos/{{$p->img}}" alt="img">
+          
             <div class="descripcion_prod">
               <h5>{{$p->descripcion}}</h5>
             </div>
@@ -183,8 +185,13 @@ $j=0;
         <div class="product-info container">
           <div class="row d-flex h-100 align-items-center">
             <div class="product_title col" style="height: 230px">
-              <h2>{{$p->codigo}}</h2>
+              <h3 style="color: #355296">{{$p->codigo}}</h3>
+              <h2 style="color: #2850ac">1000 Bs</h2> 
+        
+              <h5 style="color: rgb(110, 100, 100);text-decoration-line: line-through;">1120 BS</h5>
+         
               <p>{{$p->descripcion}}</p>
+              
               <div class="product-price-btn">
                 <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
                   style="color: {{ $p->color_text }};"
@@ -230,8 +237,6 @@ $j=0;
   </div>
 </section>
 <!-- End of Client Section -->
-
-@include('footer')
 
 @section('js')
 <script>
@@ -304,6 +309,26 @@ $j=0;
     });
   });
 </script>
+<script>
+  $(document).ready(function() {
+    $('#exampleModal').modal('show')
+  });
+  $('.botonX').click(function() {
+    $('#exampleModal').modal('hide')
+  });
+  $('.botonX').click(function() {
+    $('#exampleModal2').modal('hide')
+  });
+</script>
 @endsection
+
+
+
+
+
+
+@include('footerIni')
+
+
 
 @endsection

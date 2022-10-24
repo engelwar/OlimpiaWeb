@@ -71,7 +71,8 @@
                 <a id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Calacoto</a>
                 <a id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Handal</a>
                 <a id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Mariscal</a>
-                </div>
+                <a id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settingsSan" role="tab" aria-controls="v-pills-settingsSan" aria-selected="false">San Miguel</a>  
+            </div>
             </nav>
         </aside>
         <div class="tab-content" id="v-pills-tabContent">
@@ -134,7 +135,23 @@
                     <i class="fas fa-mobile-alt"></i><a href="tel:+59176753237" class="cel_contactos"> (591) 767 532 39 </a><br>
                 </div>
             </div>
+
             </div>
+            <div class="mapas_direcciones tab-pane fade" id="v-pills-settingsSan" role="tabpanel" aria-labelledby="v-pills-settings-tabSan">
+                <div  class="direcciones_olimpia">
+                    <div class="detalle_mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d239.03998669153592!2d-68.0771313!3d-16.5442732!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f213a74c71b9d%3A0x972ce972bfd81226!2sLibrer%C3%ADa%20Olimpia!5e0!3m2!1ses!2sbo!4v1666618149201!5m2!1ses!2sbo"allowfullscreen="" loading="lazy" width="100%" height="280" style="border:0"></iframe> 
+                    </div>
+                        <div class="detalles_sucursales">
+                        <h5>SUCURSAL SAN MIGUEL</h5>
+                        <hr>
+                        <i class="fas fa-globe"></i> Edificio San Fe, Calle 21 de Calacoto<br>
+                        <i class="fas fa-phone"></i> <a href="tel:+5912204091"> (591 - 2) 2770782</a><br>
+                        <i class="fas fa-mobile-alt"></i><a href="tel:+59176753237" class="cel_contactos"> (591) 767 532 32 </a><br>
+                    </div>
+                </div>
+    
+                </div>
         </div>
     </div>
 </section>
