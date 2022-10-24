@@ -3,6 +3,16 @@
  * https://gettemplates.co/roxy
  */
 
+
+/*estilo de botones hecho por rem*/
+
+  /*totacion de cuadro con hijo*/
+  
+  
+/*-------------------------------*/
+
+
+
 @font-face {
     font-family: "FuturaLuz";
     src: url("../fonts/Futura Std Book.ttf") format("truetype");
@@ -2020,3 +2030,4 @@ section.history>div {
     width: 50%;
     }
 }
+

@@ -1,49 +1,118 @@
-  <!-- Modal -->
+  
+
+<style>
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+
+  width: 130px;
+  height: 40px;
+
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: none;
+
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+
+</style>
+
+  
+  
+  <!-- Modal  politicas-->
   <div class="modal fade p-0 exampleModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
+ 
     <div class="modal-dialog">
       <div class="modal-content">
+
         <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="exampleModal"><img src="{{ asset('img/icon.png') }}" width="20%" height="20%"alt=""></h5>
+          <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">X
+            
+          </button>
         </div>
+       
+     
         <div class="modal-body">
-          <img src="{{ asset('img/POLITICAS.jpg') }}" alt="">
+          <img  src="{{ asset('img/POLITICAS.jpg') }}"  alt="">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
+          <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">Cerrar</button>   </div>
       </div>
     </div>
   </div>
 
-  <section id="cta" style="background-color:#203972;border-top:solid #fff">
-    <div class="container-fluid">
-      <div class="section-content-footer">
-        <div class="row">
-          <div class="col-md-4 text-left">
-            <img src="{{ asset('img/logo-white.png')}}" alt="" style="width:200px">
-          </div>
-          <div class="text-center m-auto col-md-4">
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Politicas</button>
-          </div>
-          <div class="links_social col-md-4 text-right d-flex align-items-center justify-content-end ">
-            <nav class="nav nav-mastfoot">
-              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.facebook.com/olimpialibreria" target="_blank">
-                <i class="fab fa-facebook-f fa-2x"></i>
-              </a>
-              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.instagram.com/libreriaolimpia/" target="_blank">
-                <i class="fab fa-instagram fa-2x"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 d-flex align-items-center">
-            <p class="mx-auto text-center text-white mb-0">
-              &copy; 2021 LIBRERÍA Y PAPELERÍA OLIMPIA S.R.L. <br>
-              <a style="font-size: 0.7rem; cursor:pointer" id="term-modal">Términos y condiciones</a>
-            </p>
-          </div>
-        </div>
+<!-- Modal de condiciones de uso-->
+<div class="modal fade p-0 exampleModal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
+ 
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal"><img src="{{ asset('img/icon.png') }}" width="20%" height="20%"alt=""></h5>
+        <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">X
+          
+        </button>
+      </div>
+     
+   
+      <div class="modal-body">
         <div id="terminos" class="te-modal">
           <div class="term-modal" style="height:80wh;">
             <div class="row g-0 justify-content-center p-4 bg-white">
@@ -152,12 +221,63 @@
           </div>
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" id="" class="botonX btn btn-sm btn-default btn-close" data-dismiss="modal">Cerrar</button>   </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <section id="cta" style="background-color:#203972;border-top:solid #fff">
+    <div class="container-fluid">
+      <div class="section-content-footer">
+        <div class="row">
+          <div class="col-md-4 text-left">
+            <img src="{{ asset('img/logo-white.png')}}" alt="" style="width:200px">
+          </div>
+          <div class="text-center m-auto col-md-4">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: none;background: none">
+            <span id="a2">Politicas</span>
+            </button>
+         
+      
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: none;background: none">Terminos y condiciones</button>
+          </div>
+
+          
+          <div class="links_social col-md-4 text-right d-flex align-items-center justify-content-end ">
+            <nav class="nav nav-mastfoot">
+              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.facebook.com/olimpialibreria" target="_blank">
+                <i class="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a class="nav-link-footer d-flex align-items-center justify-content-center" href="https://www.instagram.com/libreriaolimpia/" target="_blank">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <p class="mx-auto text-center text-white mb-0">
+              &copy; 2021 LIBRERÍA Y PAPELERÍA OLIMPIA S.R.L. <br>
+          <!--<a style="font-size: 0.7rem; cursor:pointer" id="term-modal">Términos y condiciones</a>-->    
+            </p>
+          </div>
+        </div>
+     
+      </div>
     </div>
     @section('js')
     <script>
-      $(document).ready(function() {
-        $('#exampleModal').modal('toggle')
+    
+      $('.botonX').click(function() {
+        $('#exampleModal').modal('hide')
+      });
+      $('.botonX').click(function() {
+        $('#exampleModal2').modal('hide')
       });
     </script>
+  
     @endsection
   </section>

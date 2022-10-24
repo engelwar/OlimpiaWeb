@@ -200,7 +200,7 @@ $j=0;
 </section>
 <!-- End of Client Section -->
 
-@include('footer')
+@include('footerIni')
 
 @section('js')
 <script>
