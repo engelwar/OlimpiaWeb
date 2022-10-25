@@ -133,10 +133,12 @@ $conteo = 0;
       @endphp
       @if ($p->seccion == 5 && $p->orden == 1)
       <img src="img/Productos/banner/{{$p->img}}" style="width:300px; margin-top: 40px">
-      @elseif($conteo == 1)
-      <div class="heading-section text-center">
+      @else
+      @if ($conteo == 1)
+      <div class="heading-section text-center pt-4">
         <h2>OFERTAS</h2>
       </div>
+      @endif
       @endif
       @endforeach
     </div>
@@ -146,7 +148,7 @@ $conteo = 0;
       <div class="swiper-wrapper">
         @foreach($ofer as $k => $p)
         <div class="swiper-slide">
-          <div class="carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
+          <div class="myBtnOfer{{$k+1}} carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
             style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
             @endif
             >
@@ -187,7 +189,7 @@ $conteo = 0;
     @endif
   </div>
 </section>
-
+<!-- FIN DE CAROUSEL OFERTAS -->
 @foreach($prod as $k => $p)
 <div id="myModal{{$k+1}}" class="modal">
   <div class="con-modal">
@@ -226,7 +228,44 @@ $conteo = 0;
   </div>
 </div>
 @endforeach
-<!-- FIN DE CAROUSEL OFERTAS -->
+@foreach($ofer as $k => $p)
+<div id="myModalOfer{{$k+1}}" class="modal">
+  <div class="con-modal">
+    <div class="row g-0 justify-content-center w-70">
+      <div class="img_product">
+        <div id="zoominOfer{{$k+1}}" class="zoomin" style="background-image: url(img/Productos/{{$p->img}});">
+        </div>
+      </div>
+      <div class="datos_product">
+        <div class="product-info container">
+          <div class="row d-flex h-100 align-items-center">
+            <div class="product_title col" style="height: 230px">
+              <h3 style="color: #355296">{{$p->codigo}}</h3>
+              <p>{{$p->descripcion}}</p>
+              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
+              <h5 style="color: #d11313;text-decoration-line: line-through; margin-bottom: 0;">Antes {{$p->precio_anterior}} Bs.</h5>
+              @endif
+              @if ($p->precio_anterior != null || $p->precio_anterior != 0)
+              <h3 style="color: #2850ac">Ahora {{$p->precio_actual}} Bs.</h3>
+              @else
+              <h3 style="color: #2850ac">Precio {{$p->precio_actual}} Bs.</h3>
+              @endif
+              <div class="product-price-btn">
+                <a href="{{$p->url}}" target="_blank" @if ($p->producto_oferta == 'Ofertas')
+                  style="color: {{ $p->color_text }};"
+                  @endif
+                  >
+                  <button class="btn btn-primary btn-shadow btn-lg">Comprar</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
 
 <!-- Client Section -->
 <section id="client" class="overlay-claro" style="background-image: url({{ asset('img/material.jpg')}}); background-size: cover;">
@@ -271,9 +310,13 @@ $conteo = 0;
     }
 
     var cont = "{!!json_encode($prod->count())!!}";
+    var contOfer = "{!!json_encode($ofer->count())!!}";
 
     for (var i = 1; i <= cont; i++) {
       modalfunc($(".myBtn" + i), $("#myModal" + i));
+    }
+    for (var i = 1; i <= contOfer; i++) {
+      modalfunc($(".myBtnOfer" + i), $("#myModalOfer" + i));
     }
 
     var addZoom = function(target) {
@@ -318,10 +361,11 @@ $conteo = 0;
 
     window.addEventListener("load", function() {
 
-      var cont = "{!!json_encode($prod->count())!!}";
-
       for (var i = 1; i <= cont; i++) {
         addZoom("zoomin" + i);
+      }
+      for (var i = 1; i <= contOfer; i++) {
+        addZoom("zoominOfer" + i);
       }
 
     });
