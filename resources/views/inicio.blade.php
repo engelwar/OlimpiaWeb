@@ -79,7 +79,7 @@ $conteo = 0;
 
 <!-- INICIO DE CAROUSEL PRODUCTOS -->
 <section class="container_glide mt-4">
-  <div class="featurettes container_banner_productos_halloween" @foreach ($bann as $k=> $p)
+  <div class="featurettes container_banner_productos_halloween container_banner_productos" @foreach ($bann as $k=> $p)
     @if ($p->seccion == 2 && $p->orden == 1)
     style="background-image: url(img/Productos/banner/{{$p->img}});"
     @endif
@@ -128,17 +128,17 @@ $conteo = 0;
     >
     <div class="heading-section text-center">
       @foreach ($bann as $k=> $p)
-      @php
-      $conteo++;
-      @endphp
       @if ($p->seccion == 5 && $p->orden == 1)
       <img src="img/Productos/banner/{{$p->img}}" style="width:300px; margin-top: 40px">
-      @else
-      @if ($conteo == 1)
-      <div class="heading-section text-center pt-4">
-        <h2>OFERTAS</h2>
-      </div>
-      @endif
+      @elseif ($p->seccion == 5 && $p->orden != 1)
+        @php
+        $conteo++;
+        @endphp
+        @if ($conteo == 1)
+        <div class="heading-section text-center pt-4">
+          <h2>OFERTAS</h2>
+        </div>
+        @endif
       @endif
       @endforeach
     </div>
