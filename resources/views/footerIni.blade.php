@@ -1,10 +1,4 @@
-  
-
-
-    
-      
-      
-      <!-- Modal  politicas-->
+        <!-- Modal  politicas-->
       <div class="modal fade p-0 exampleModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 2000;">
      
         <div class="modal-dialog">

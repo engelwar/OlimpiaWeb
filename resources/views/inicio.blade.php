@@ -126,7 +126,6 @@ $conteo = 0;
     @endif
     @endforeach
     >
-    >
     <div class="heading-section text-center">
       @foreach ($bann as $k=> $p)
       @php
@@ -147,7 +146,7 @@ $conteo = 0;
       <div class="swiper-wrapper">
         @foreach($ofer as $k => $p)
         <div class="swiper-slide">
-          <div class="myBtn{{$k+1}} carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
+          <div class="carousel__elemento" @if ($p->producto_oferta == 'Ofertas')
             style="background-color: {{$p->color_bloque}}; color: {{ $p->color_text }};"
             @endif
             >
@@ -188,6 +187,7 @@ $conteo = 0;
     @endif
   </div>
 </section>
+
 @foreach($prod as $k => $p)
 <div id="myModal{{$k+1}}" class="modal">
   <div class="con-modal">
@@ -339,14 +339,5 @@ $conteo = 0;
   });
 </script>
 @endsection
-
-
-
-
-
-
 @include('footerIni')
-
-
-
 @endsection
