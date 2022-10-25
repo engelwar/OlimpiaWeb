@@ -2,14 +2,14 @@
 
 @section('content')
 
-<nav class="navbar navbar-expand-lg mt-1">
+<nav class="" style="position: fixed; right: -22px; z-index: 300;">
     <div class="container justify-content-center flex-column" id="navbarSupportedContent">
         <div class="mt-3 myBtn">
-            <a href="{{ route('banner.create')}}" class="btn btn-primary">Agregar Imagen</a>
+            <a href="{{ route('banner.create')}}" class="btn btn-outline-warning">Agregar Imagen</a>
         </div>
         <form action="{{ route('banner.orden')}}" method="POST">
             @csrf
-            <button class="btn btn-primary mt-2" type="submit" id="saveorder" name="orden" value="">Guardar Orden</button>
+            <button class="btn btn-outline-warning mt-2" type="submit" id="saveorder" name="orden" value="">Guardar Orden</button>
         </form>
     </div>
 </nav>
@@ -65,14 +65,6 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg mt-1">
-    <div class="container justify-content-center flex-column" id="navbarSupportedContent">
-        <div class="mt-3 myBtn">
-            <a href="{{ route('banner.create')}}" class="btn btn-primary">Agregar Imagen</a>
-        </div>
-    </div>
-</nav>
-
 <div class="container_tablas m-auto w-100">
     <div class="tabla1 w-100 pl-md-3 pr-md-3">
         <div class="mt-3 mr-1">
@@ -124,14 +116,6 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg mt-1">
-    <div class="container justify-content-center flex-column" id="navbarSupportedContent">
-        <div class="mt-3 myBtn">
-            <a href="{{ route('banner.create')}}" class="btn btn-primary">Agregar Imagen</a>
-        </div>
-    </div>
-</nav>
-
 <div class="container_tablas m-auto w-100">
     <div class="tabla1 w-100 pl-md-3 pr-md-3">
         <div class="mt-3 mr-1">
@@ -183,14 +167,6 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg mt-1">
-    <div class="container justify-content-center flex-column" id="navbarSupportedContent">
-        <div class="mt-3 myBtn">
-            <a href="{{ route('banner.create')}}" class="btn btn-primary">Agregar Imagen</a>
-        </div>
-    </div>
-</nav>
-
 <div class="container_tablas m-auto w-100">
     <div class="tabla1 w-100 pl-md-3 pr-md-3">
         <div class="mt-3 mr-1">
@@ -242,14 +218,6 @@
         </div>
     </div>
 </div>
-<nav class="navbar navbar-expand-lg mt-1">
-    <div class="container justify-content-center flex-column" id="navbarSupportedContent">
-        <div class="mt-3 myBtn">
-            <a href="{{ route('banner.create')}}" class="btn btn-primary">Agregar Imagen</a>
-        </div>
-    </div>
-</nav>
-
 <div class="container_tablas m-auto w-100">
     <div class="tabla1 w-100 pl-md-3 pr-md-3">
         <div class="mt-3 mr-1">
