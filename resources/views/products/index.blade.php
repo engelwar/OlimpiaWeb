@@ -18,12 +18,14 @@
       <div class="card-header text-center">
         <h2>Productos</h2>
       </div>
-      <form action="">
+      <form action="{{ route('prod_categoria') }}" method="POST">
+        @csrf
         <div class="d-flex justify-content-around align-items-center">
           <div class="mb-3">
             <label for="" class="form-label">Color de Bloque</label>
             <input type="color" class="form-control form-control-color m-auto" id="exampleColorInput" value="" title="Choose your color" name="color_bloque" required>
           </div>
+          <input class="d-none" type="text" name="categoria" value="Productos">
           <div>
             <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>
           </div>
@@ -91,12 +93,14 @@
       <div class="card-header text-center">
         <h2>Ofertas</h2>
       </div>
-      <form action="">
+      <form action="{{ route('prod_categoria') }}" method="POST">
+        @csrf
         <div class="d-flex justify-content-around align-items-center">
           <div class="mb-3">
             <label for="" class="form-label">Color de Bloque</label>
             <input type="color" class="form-control form-control-color m-auto" id="exampleColorInput" value="" title="Choose your color" name="color_bloque" required>
           </div>
+          <input class="d-none" type="text" name="categoria" value="Ofertas">
           <div>
             <button type="submit" class="btn btn-primary" tabindex="6">Guardar</button>
           </div>

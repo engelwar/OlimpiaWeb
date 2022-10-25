@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use DB;
 
 use function GuzzleHttp\Promise\all;
 
@@ -127,7 +128,16 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-    public function colorGeneral(){
-      
+    public function colorGeneral(Request $request){
+      if ($request->categoria == 'Productos'){
+        DB::table('products')
+          ->where('producto_oferta', $request->categoria)
+          ->update(['color_bloque' => $request->color_bloque, 'color_text' => $request->color_text]);
+      } else {
+        DB::table('products')
+          ->where('producto_oferta', $request->categoria)
+          ->update(['color_bloque' => $request->color_bloque, 'color_text' => $request->color_text]);
+      }
+      return redirect()->route('products.index');
     }
 }

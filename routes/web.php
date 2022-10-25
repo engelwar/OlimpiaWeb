@@ -33,6 +33,8 @@ Route::get('/products/index', 'ProductController@index')->name('product');
 
 Route::resource('products','ProductController');
 
+Route::post('/products/categoria','ProductController@colorGeneral')->name('prod_categoria');
+
 Route::get('/banner/index', 'BannerController@index')->name('banner');
 Route::post('/banner/guardar/orden', 'BannerController@orden')->name('banner.orden');
 Route::resource('banner','BannerController');
