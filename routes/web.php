@@ -34,7 +34,7 @@ Route::get('/products/index', 'ProductController@index')->name('product');
 Route::resource('products','ProductController');
 
 Route::get('/banner/index', 'BannerController@index')->name('banner');
-Route::any('/banner/guardar/orden', 'BannerController@orden')->name('banner.orden');
+Route::post('/banner/guardar/orden', 'BannerController@orden')->name('banner.orden');
 Route::resource('banner','BannerController');
 
 Route::get('/libros/index', 'LibroController@index')->name('libro');
