@@ -110,6 +110,20 @@
                 }
                 reader.readAsDataURL(this.files[0]);
             });
+<<<<<<< HEAD
+=======
+            $('.seleccionar_orden').change(function() {
+                var data = [];
+                $('.order select').each(function(index, element) {
+                    data.push({
+                        id: $(this).attr('id'),
+                        order: $(this).val()
+                    });
+                    
+                });
+                $('#saveorder').val(JSON.stringify(data));
+            });
+>>>>>>> 66bce055bc4ff35e9237c5235dff18cd421a60b0
         });
     </script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" defer></script>

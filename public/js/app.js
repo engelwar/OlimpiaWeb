@@ -50006,8 +50006,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Apache24\htdocs\olimpiaweb\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Apache24\htdocs\olimpiaweb\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Apache24\htdocs\web\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Apache24\htdocs\web\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 66bce055bc4ff35e9237c5235dff18cd421a60b0
 
 
 /***/ })

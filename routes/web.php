@@ -1,6 +1,12 @@
 <?php
 
+use App\Product;
+use App\banner;
+use App\Libro;
+use App\Marca;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Products;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +42,26 @@ Route::get('/nosotros', function () {
 })->name('nosotros');
 
 Route::resource('contacto','ContactoController');
+
+Route::get('/products/index', 'ProductController@index')->name('product');
+
+Route::resource('products','ProductController');
+
+Route::post('/products/categoria','ProductController@colorGeneral')->name('prod_categoria');
+
+Route::get('/banner/index', 'BannerController@index')->name('banner');
+Route::post('/banner/guardar/orden', 'BannerController@orden')->name('banner.orden');
+Route::resource('banner','BannerController');
+
+Route::get('/libros/index', 'LibroController@index')->name('libro');
+
+Route::resource('libros','LibroController');
+
+Route::get('/marcas/index', 'MarcaController@index')->name('marca');
+
+Route::resource('marcas','MarcaController');
+
+
+Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

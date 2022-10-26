@@ -1,4 +1,5 @@
 ! function (n, t, e) {
+<<<<<<< HEAD
     console.log("init");
     var o = {
         init: function (e) {
@@ -172,4 +173,7 @@
     n(e).ready(function () {
         o.init(n)
     })
+=======
+
+>>>>>>> 66bce055bc4ff35e9237c5235dff18cd421a60b0
 }(window.jQuery, window, document);
