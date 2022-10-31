@@ -38,7 +38,7 @@
           <div class="modal-body">
             <div id="terminos" class="te-modal">
               <div class="term-modal" style="height:80wh;">
-                <div class="row g-0 justify-content-center p-4 bg-white">
+                <div class="row g-0 justify-content-center text-justify p-4 bg-white">
                   <div class="col">
                     <h5>Condiciones de uso </h5>
                     <p>Bienvenido a www.libreriaolimpia.com. Estos términos y condiciones se aplican al sitio web de Librería y Papelería Olimpia SRL.
@@ -166,7 +166,7 @@
                   
                 </button>
              
-                <span style="color: #fff;">&amp;</span>
+                <span style="color: #fff;">|</span>
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: none;background: none">
                 <span>Terminos </span><span style="text-transform: lowercase"> y</span> <span style="text-transform: lowercase"> condiciones</span>
                 </button>
